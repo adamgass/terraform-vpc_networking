@@ -1,0 +1,11 @@
+region = 
+vpccidr = 
+PubSN1Cidr = 
+PubSN2Cidr = 
+PvtSN1Cidr = 
+PvtSN2Cidr = 
+PublicIPv4Subnets = 
+EnableIPv6 = 
+s3_backend_name = 
+s3_backend_region = 
+dynamodb_table_name = 
