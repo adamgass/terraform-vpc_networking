@@ -237,7 +237,9 @@ resource "aws_network_acl_rule" "NACLPubAllowAllIPv4In" {
   network_acl_id = aws_network_acl.NetworkAclPublic.id
   rule_number    = 100
   egress         = false
-  protocol       = "tcp"
+  protocol       = -1
+  from_port      = 0
+  to_port        = 0
   rule_action    = "allow"
   cidr_block     = "0.0.0.0/0"
 }
@@ -292,7 +294,9 @@ resource "aws_network_acl_rule" "NACLPvtAllowAllIPv4Out" {
   network_acl_id = aws_network_acl.NetworkAclPrivate.id
   rule_number    = 100
   egress         = true
-  protocol       = "tcp"
+  protocol       = -1
+  from_port      = 0
+  to_port        = 0
   rule_action    = "allow"
   cidr_block     = "0.0.0.0/0"
 }
